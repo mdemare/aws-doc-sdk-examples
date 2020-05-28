@@ -26,7 +26,8 @@ require 'aws-sdk-ec2'  # v2: require 'aws-sdk'
 
 ec2 = Aws::EC2::Resource.new(region: 'us-west-2')
       
-i = ec2.instance('i-123abc')
+id = 'i-123abc'
+i = ec2.instance(id)
     
 if i.exists?
   case i.state.code
